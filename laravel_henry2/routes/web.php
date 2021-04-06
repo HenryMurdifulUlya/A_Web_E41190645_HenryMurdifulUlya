@@ -11,13 +11,12 @@
 |
 */
 
-//Route::get('/home', function () {
-  //  return view('home');
-//});
-//Route::get('user','ManagementUserController@index');
-//Route::resource('user','ManagementUserController');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::group(['namespace' => 'Frontend'], function()
-    {
-        Route::resource('home', 'HomeController');
-    });
+{
+   Route::resource('home','HomeController');
+
+});
